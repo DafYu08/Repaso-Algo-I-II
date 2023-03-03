@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//SUMAS Y PROMEDIOS
 void sumaYPromedio{
 int cantEst;
     cout<< "Hola, ingrese la cantidad de estudiantes: "<<endl;
@@ -30,3 +31,51 @@ int main () {
     sumaYPromedio();
     return 0;
 }
+
+//COLLATZ
+oid collatz(int &n, int& cantPasos){
+    if (n%2==0){
+        n /= 2;
+    } else{
+        n = 3*n + 1;
+    }
+    cantPasos++;
+    cout<< n <<" ";
+}
+
+int main () {
+    int n;
+    int cantPasos = 0;
+    cout<< "Ingrese un natural: "<<endl;
+    cin>> n;
+    while (n != 1){
+        collatz(n, cantPasos);
+    }
+    cout <<" "<<endl;
+    cout<< "Cantidad total de pasos: "<< cantPasos;
+
+    return 0;
+}oid collatz(int &n, int& cantPasos){
+    if (n%2==0){
+        n /= 2;
+    } else{
+        n = 3*n + 1;
+    }
+    cantPasos++;
+    cout<< n <<" ";
+}
+
+int main () {
+    int n;
+    int cantPasos = 0;
+    cout<< "Ingrese un natural: "<<endl;
+    cin>> n;
+    while (n != 1){
+        collatz(n, cantPasos);
+    }
+    cout <<" "<<endl;
+    cout<< "Cantidad total de pasos: "<< cantPasos;
+
+    return 0;
+}
+
