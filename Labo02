@@ -1,0 +1,32 @@
+#include <iostream>
+#include <math.h>
+#include <vector>
+
+using namespace std;
+
+void sumaYPromedio{
+int cantEst;
+    cout<< "Hola, ingrese la cantidad de estudiantes: "<<endl;
+    cin >> cantEst;
+    float suma = 0;
+    float prom = 0;
+    for (int i = 0; i < cantEst; i++) {
+        float x;
+        cout<<"Ingrese una calificación: "<<endl;
+        cin>> x;
+        if (0<x && x<=10) {
+            suma += x;
+            prom += x / cantEst;
+        } else {
+            i--;
+            cout<<"Reingrese el dato anterior"<<endl;
+        }
+    }
+    cout<<"La suma total es: "<< suma<< endl;
+    cout<<"El promedio es: "<< prom<<endl;
+}
+
+int main () {
+    sumaYPromedio();
+    return 0;
+}
