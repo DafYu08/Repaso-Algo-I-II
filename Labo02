@@ -124,6 +124,27 @@ int main () {
     return 0;
 }
 
+//DIVISION
+void division (int &a, int &b, int &c, int &d){ //pasaje por referencia obligatorio
+    while (a >= b){
+        c++;
+        a = a - b;
+    }
+    d = a%b; 
+        
+}
 
+int main () {
+    int a;
+    int b;
+    int c = 0;
+    int d = 0;
+    cin >> a;
+    cin >> b;
+    division(a,b,c,d);
+    cout << c << " " << d;
+    return 0;
+    
+}
 
 
